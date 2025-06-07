@@ -1,0 +1,3 @@
+_id,apartmentName,apartmentDesc,apartmentPic,apartmentLoc,rooms,bathrooms,kitchen,amenities,area,rent,securityDeposit,availableFrom,availableTill,__v
+63d3dc015f3b691357eae8a0,abc,abc,C:\fakepath\0655f1d1-562f-4c1c-9e57-e98784fd5577.png,dsfsd,1,1,1,sdsf,23,2222,2222,2023-01-26T23:00:00.000Z,2023-01-30T23:00:00.000Z,0
+63d40cc65f3b691357eae8a9,abc,abc,C:\fakepath\0655f1d1-562f-4c1c-9e57-e98784fd5577.png,uigh,1,1,1,hgjhg,38,6666,6667,2023-01-26T23:00:00.000Z,2023-01-27T23:00:00.000Z,0

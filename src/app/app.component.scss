@@ -1,0 +1,17 @@
+.main {
+  margin: 20px;
+}
+
+.flexSpaceBetween {
+  justify-content: space-around;
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+.logobox {
+  position: absolute;
+  top: 15px !important;
+  margin-top: 5px !important;
+}

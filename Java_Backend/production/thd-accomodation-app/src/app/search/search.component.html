@@ -1,0 +1,39 @@
+<div class="main">
+  <div class="form-search">
+    <form class="search-form">
+      <mat-form-field class="searchBar">
+        <span matPrefix> </span>
+        <input
+          type="text"
+          matInput
+          placeholder="{{ 'searchPlaceholder' | translate }}"
+          name="search"
+          class="searchTerm"
+          [(ngModel)]="search"
+          (ngModelChange)="emitActionBtnClicked(search)"
+        />
+        <button
+          class="searchButton"
+          matSuffix
+          mat-button
+          (click)="emitActionBtnClicked(search)"
+        >
+          <mat-icon class="searchButton">search</mat-icon>
+        </button>
+        <!-- <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+          {{option}}
+        </mat-option> -->
+      </mat-form-field>
+      <br />
+      <button
+        *ngIf="userRole === 'admin'"
+        type="button"
+        class="add-card"
+        (click)="addCard('addCard')"
+      >
+        Post Ad
+      </button>
+    </form>
+  </div>
+</div>
+<router-outlet></router-outlet>

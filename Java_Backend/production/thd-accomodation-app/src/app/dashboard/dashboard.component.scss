@@ -1,0 +1,11 @@
+.no-display{
+  display: none;
+}
+.float {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 5em;
+  height: 5em;
+  z-index: 1;
+}

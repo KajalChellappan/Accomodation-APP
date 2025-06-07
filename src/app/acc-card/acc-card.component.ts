@@ -1,0 +1,258 @@
+import { Router } from '@angular/router';
+import { Component, OnInit } from '@angular/core';
+
+@Component({
+  selector: 'app-acc-card',
+  templateUrl: './acc-card.component.html',
+  styleUrls: ['./acc-card.component.scss'],
+})
+export class AccCardComponent implements OnInit {
+  items = [
+    {
+      apartmentPic: '/assets/apartment_1.jpg',
+      apartmentName: 'Hoffman',
+      apartmentLoc: 'munich',
+      apartmentDesc: '2 bhk apartment with parking',
+      rooms: 2,
+      bathrooms: 1,
+      kitchen: 1,
+      area: '19 m²',
+      rent: '€500/month',
+      availableFrom: '10/02/2023',
+      availableTill: '30/12/2023',
+    },
+    {
+      apartmentPic: '/assets/apartment_2.jpg',
+      apartmentName: 'student park',
+      apartmentLoc: 'berlin',
+      apartmentDesc: '3 bhk apartment with parking ',
+      rooms: 3,
+      bathrooms: 3,
+      kitchen: 2,
+      area: '50 m²',
+      rent: '€1600/month',
+      securityDeposit: '€1000',
+      availableFrom: '20/03/2023',
+      amenities: 'Gym, commonkitchen,playground',
+    },
+    {
+      apartmentPic: '/assets/apartment_3.jpg',
+      apartmentName: 'student hostel',
+      apartmentLoc: 'dresden',
+      apartmentDesc: '1 studio apartment without parking , common kitchen',
+      rooms: 1,
+      bathrooms: 1,
+      kitchen: 0,
+      area: '16 m²',
+      rent: '€300/month',
+      securityDeposit: '€300',
+      availableFrom: '30/01/2023',
+    },
+    {
+      apartmentPic: '/assets/apartment_3.jpg',
+      apartmentName: 'student hostel',
+      apartmentLoc: 'dresden',
+      apartmentDesc: '1 studio apartment without parking , common kitchen',
+      rooms: 1,
+      bathrooms: 1,
+      kitchen: 0,
+      area: '16 m²',
+      rent: '€300/month',
+      securityDeposit: '€300',
+      availableFrom: '30/01/2023',
+    },
+    {
+      apartmentPic: '/assets/apartment_3.jpg',
+      apartmentName: 'student hostel',
+      apartmentLoc: 'dresden',
+      apartmentDesc: '1 studio apartment without parking , common kitchen',
+      rooms: 1,
+      bathrooms: 1,
+      kitchen: 0,
+      area: '16 m²',
+      rent: '€300/month',
+      securityDeposit: '€300',
+      availableFrom: '30/01/2023',
+    },
+    {
+      apartmentPic: '/assets/apartment_3.jpg',
+      apartmentName: 'student hostel',
+      apartmentLoc: 'dresden',
+      apartmentDesc: '1 studio apartment without parking , common kitchen',
+      rooms: 1,
+      bathrooms: 1,
+      kitchen: 0,
+      area: '16 m²',
+      rent: '€300/month',
+      securityDeposit: '€300',
+      availableFrom: '30/01/2023',
+    },
+    {
+      apartmentPic: '/assets/apartment_3.jpg',
+      apartmentName: 'student hostel',
+      apartmentLoc: 'dresden',
+      apartmentDesc: '1 studio apartment without parking , common kitchen',
+      rooms: 1,
+      bathrooms: 1,
+      kitchen: 0,
+      area: '16 m²',
+      rent: '€300/month',
+      securityDeposit: '€300',
+      availableFrom: '30/01/2023',
+    },
+    {
+      apartmentPic: '/assets/apartment_3.jpg',
+      apartmentName: 'student hostel',
+      apartmentLoc: 'dresden',
+      apartmentDesc: '1 studio apartment without parking , common kitchen',
+      rooms: 1,
+      bathrooms: 1,
+      kitchen: 0,
+      area: '16 m²',
+      rent: '€300/month',
+      securityDeposit: '€300',
+      availableFrom: '30/01/2023',
+    },
+    {
+      apartmentPic: '/assets/apartment_3.jpg',
+      apartmentName: 'student hostel',
+      apartmentLoc: 'dresden',
+      apartmentDesc: '1 studio apartment without parking , common kitchen',
+      rooms: 1,
+      bathrooms: 1,
+      kitchen: 0,
+      area: '16 m²',
+      rent: '€300/month',
+      securityDeposit: '€300',
+      availableFrom: '30/01/2023',
+    },
+    {
+      apartmentPic: '/assets/apartment_3.jpg',
+      apartmentName: 'student hostel',
+      apartmentLoc: 'dresden',
+      apartmentDesc: '1 studio apartment without parking , common kitchen',
+      rooms: 1,
+      bathrooms: 1,
+      kitchen: 0,
+      area: '16 m²',
+      rent: '€300/month',
+      securityDeposit: '€300',
+      availableFrom: '30/01/2023',
+    },
+    {
+      apartmentPic: '/assets/apartment_3.jpg',
+      apartmentName: 'student hostel',
+      apartmentLoc: 'dresden',
+      apartmentDesc: '1 studio apartment without parking , common kitchen',
+      rooms: 1,
+      bathrooms: 1,
+      kitchen: 0,
+      area: '16 m²',
+      rent: '€300/month',
+      securityDeposit: '€300',
+      availableFrom: '30/01/2023',
+    },
+    {
+      apartmentPic: '/assets/apartment_3.jpg',
+      apartmentName: 'student hostel',
+      apartmentLoc: 'dresden',
+      apartmentDesc: '1 studio apartment without parking , common kitchen',
+      rooms: 1,
+      bathrooms: 1,
+      kitchen: 0,
+      area: '16 m²',
+      rent: '€300/month',
+      securityDeposit: '€300',
+      availableFrom: '30/01/2023',
+    },
+    {
+      apartmentPic: '/assets/apartment_3.jpg',
+      apartmentName: 'student hostel',
+      apartmentLoc: 'dresden',
+      apartmentDesc: '1 studio apartment without parking , common kitchen',
+      rooms: 1,
+      bathrooms: 1,
+      kitchen: 0,
+      area: '16 m²',
+      rent: '€300/month',
+      securityDeposit: '€300',
+      availableFrom: '30/01/2023',
+    },
+    {
+      apartmentPic: '/assets/apartment_3.jpg',
+      apartmentName: 'student hostel',
+      apartmentLoc: 'dresden',
+      apartmentDesc: '1 studio apartment without parking , common kitchen',
+      rooms: 1,
+      bathrooms: 1,
+      kitchen: 0,
+      area: '16 m²',
+      rent: '€300/month',
+      securityDeposit: '€300',
+      availableFrom: '30/01/2023',
+    },
+    {
+      apartmentPic: '/assets/apartment_3.jpg',
+      apartmentName: 'student hostel',
+      apartmentLoc: 'dresden',
+      apartmentDesc: '1 studio apartment without parking , common kitchen',
+      rooms: 1,
+      bathrooms: 1,
+      kitchen: 0,
+      area: '16 m²',
+      rent: '€300/month',
+      securityDeposit: '€300',
+      availableFrom: '30/01/2023',
+    },
+    {
+      apartmentPic: '/assets/apartment_3.jpg',
+      apartmentName: 'student hostel',
+      apartmentLoc: 'dresden',
+      apartmentDesc: '1 studio apartment without parking , common kitchen',
+      rooms: 1,
+      bathrooms: 1,
+      kitchen: 0,
+      area: '16 m²',
+      rent: '€300/month',
+      securityDeposit: '€300',
+      availableFrom: '30/01/2023',
+    },
+    {
+      apartmentPic: '/assets/apartment_3.jpg',
+      apartmentName: 'student hostel',
+      apartmentLoc: 'dresden',
+      apartmentDesc: '1 studio apartment without parking , common kitchen',
+      rooms: 1,
+      bathrooms: 1,
+      kitchen: 0,
+      area: '16 m²',
+      rent: '€300/month',
+      securityDeposit: '€300',
+      availableFrom: '30/01/2023',
+    },
+  ];
+
+  initialItems = this.items;
+  showEmpty = false;
+  constructor(private router: Router) {}
+
+  ngOnInit(): void {}
+
+  getItems(data: any) {
+    console.log(data);
+  }
+  onSearch(search: String) {
+    if (!search) {
+      this.items = this.initialItems;
+      return;
+    }
+    this.items = this.initialItems.filter((o: any) =>
+      Object.keys(o).some((k: any) => {
+        if (typeof o[k] === 'string')
+          return o[k].toLowerCase().includes(search.toLowerCase());
+      })
+    );
+
+    this.showEmpty = this.items.length === 0;
+  }
+}

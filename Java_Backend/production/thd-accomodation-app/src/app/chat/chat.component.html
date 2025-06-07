@@ -1,0 +1,32 @@
+<div class="chat">
+  <div [formGroup]="messageForm" style="text-align: center">
+    <h1 *ngIf="msg.length > 0">{{ "chatMessage" | translate }}</h1>
+    <textarea cols="50" rows="10">{{ msg }}</textarea>
+    <br /><br />
+    <mat-form-field id="message" appearance="outline">
+      <div class="field-1">
+        <mat-label>{{ "chatHeading" | translate }}</mat-label>
+        <input
+          matInput
+          type="text"
+          [(ngModel)]="sendmsg"
+          placeholder="message"
+          formControlName="msginput"
+        />
+        <button mat-button type="submit" color="warn" (click)="submit()">
+          {{ "chatSend" | translate }}
+        </button>
+      </div>
+    </mat-form-field>
+  </div>
+  <div>
+    <button
+      mat-button
+      class="primary-btn"
+      type="submit"
+      (click)="backtoDashboard()"
+    >
+      {{ "chatBack" | translate }}
+    </button>
+  </div>
+</div>

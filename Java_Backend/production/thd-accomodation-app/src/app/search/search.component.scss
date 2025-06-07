@@ -1,0 +1,46 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+body{
+  background: #f2f2f2;
+}
+
+.searchTerm {
+  width: 100%;
+  border: 3px solid #00B4CC;
+  padding: 5px;
+  height: 20px;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  color: #9DBFAF;
+}
+.searchBar {
+  width: 100%;
+}
+.add-card{
+  position: relative;
+  left: 15%;
+}
+
+.searchTerm:focus{
+  color: #00B4CC;
+}
+
+.searchButton {
+  position: relative;
+   height: 40px;
+  border: 0px solid #00B4CC;
+   background: #00B4CC;
+   text-align: center;
+   color: #fff;
+   border-radius: 0 5px 5px 0;
+   padding: 0px 0px 0px 0px;
+}
+
+.mat-mdc-form-field-icon-suffix,.mat-mdc-form-field-icon{
+  padding: 0 0 0 0;
+}
+
+button[type=button] {
+position: relative;
+left: 95%;
+}
