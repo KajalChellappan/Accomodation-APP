@@ -1,14 +1,10 @@
-Chellappan Kajal - 12204385
+@Author Kajal Chellappan
 
-Thomas Sonya - 12203795
-
-THD Accomodation App
-
-https://mygit.th-deg.de/thd-accomodation-app/thd-accomodation-app
+Accomodation App
 
 # Project Description
 
-The project is an Application facilitating the Accomodation search for THD Students.
+The project is an Application facilitating the Accomodation search for Students.
 The Application includes search, posting and chat functionalities, where a user can search for an accomodation based on provided search filters and also can post a vacancy.
 
 # Installation
@@ -45,23 +41,9 @@ Run `ng test` to execute the unit tests via Karma.
 
 ## Backend
 
-Database : MongoDB
+Database : Postgres
 
-To install mongoDB:
-
-> ` npm install mongodb`
-
-To load that configuration into your application, you ’ll use the dotenv package. Install it by executing the following npm command in your terminal:
-
-> ` npm install dotenv`
-
-You can install nodemon globally with npm:
-
-> ` npm install nodemon --global`
-
-To run the Backend Server Run :
-
-> `npm start`
+Spring Boot
 
 Note : Cors installation is neccessary using the command
 
@@ -94,15 +76,3 @@ API Requests implemented :
 - Forgot Password Request(verify email and update password)
 - Post advertisement Request
 - Chat Request
-
-# Work Done
-
-- Frontend Development - Kajal Chellappan
-- Backend Development - Sonya Thomas
-- chat socket Implementation (frontend and backend)- Kajal Chellappan
-
-# Developers
-
-Kajal Chellappan
-
-Sonya Thomas
