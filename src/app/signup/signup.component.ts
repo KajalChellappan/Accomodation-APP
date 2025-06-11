@@ -43,23 +43,30 @@ export class SignupComponent implements OnInit {
 
   sendSignup(signup: User) {
     this.isSubmitted = true;
-    this.jwtService.register(signup).subscribe(
-      (res: any) => {
-        console.log('signup responsse' + res.message);
-        if ((res.message = 'Created Successfully')) {
-          this.isSuccessful = true;
-          this.isSignUpFailed = false;
-          localStorage.setItem('access_token', res.token);
-          console.log('post register response: ' + res.token);
-          this.router.navigateByUrl('/login');
-        }
-      },
-      (error) => {
+    this.jwtService.register(this.form).subscribe({
+    next: (res) => {
+      console.log('Signup response:', res);
+
+      // Adjust condition depending on your backend response
+      if (res?.message === 'User registered successfully') {
+        this.isSuccessful = true;
+        this.isSignUpFailed = false;
+        this.router.navigateByUrl('/login');
+      } else {
+        // Handle unexpected success format
         this.isSuccessful = false;
         this.isSignUpFailed = true;
-        this.isSubmitted = false;
+        this.errorMessage = res?.message || 'Unexpected response from server';
       }
-    );
+    },
+    error: (error) => {
+      console.error('Signup failed:', error);
+      this.isSuccessful = false;
+      this.isSignUpFailed = true;
+      this.isSubmitted = false;
+      this.errorMessage = error.error?.message || 'Signup failed. Please try again.';
+    }
+    });
   }
 
   toLogin() {

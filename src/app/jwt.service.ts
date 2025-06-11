@@ -49,7 +49,8 @@ export class JwtService {
       username: un,
       email: em,
       password: pw,
-    });
+    }
+    );
   }
 
   addCardData(adminForm: adminform) {

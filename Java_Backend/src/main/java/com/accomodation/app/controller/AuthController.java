@@ -14,6 +14,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationServiceException;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.Map;
 import java.util.Optional;
 
 @RestController
@@ -28,12 +29,13 @@ public class AuthController {
 
   @PostMapping("/register")
   public ResponseEntity<?> register(@Valid @RequestBody RegisterRequest request) {
+
     authService.register(request);
-    return ResponseEntity.ok("User registered successfully");
+    return ResponseEntity.ok(Map.of("message", "User registered successfully"));
   }
 
   @PostMapping("/login")
-  public ResponseEntity<?> register(@Valid @RequestBody LoginRequest request) {
+  public ResponseEntity<?> login(@Valid @RequestBody LoginRequest request) {
     var response = authService.login(request);
     return ResponseEntity.ok(response);
   }

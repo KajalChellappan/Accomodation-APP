@@ -5,16 +5,38 @@
   .spacer {
     flex: 1 1 auto;
   }
-
-  .logobox {
-    position: absolute;
-    top: 15px !important;
-    margin-top: 5px !important;
-  }
 .no-display{
   display: none;
 }
 .background-img {
   background-image: url('/assets/acc07.jpg');
   background-size: cover;
+}
+
+.app-title {
+  font-weight: bold;
+  font-size: 1.4rem;
+  color: white;
+}
+
+.subtitle {
+  font-size: 0.9rem;
+  color: #ccc;
+  margin-left: 12px;
+}
+.logobox {
+  align-items: center;
+  height: 64px; /* matches default mat-toolbar-row height */
+}
+
+.logo-img {
+  height: 128px;      /* You can tweak this */
+  width: auto;       /* Maintain aspect ratio */
+  object-fit: contain;
+  display: block;
+}
+@media (max-width: 599px) {
+  .logo-img {
+    height: 32px;
+  }
 }

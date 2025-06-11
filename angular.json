@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "thd-accomodation-app": {
+    "accomodation-app": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/thd-accomodation-app",
+            "outputPath": "dist/accomodation-app",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -64,15 +64,15 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "thd-accomodation-app:build",
+            "browserTarget": "accomodation-app:build",
             "proxyConfig": "src/proxy.conf.json"
   },
           "configurations": {
             "production": {
-              "browserTarget": "thd-accomodation-app:build:production"
+              "browserTarget": "accomodation-app:build:production"
             },
             "development": {
-              "browserTarget": "thd-accomodation-app:build:development"
+              "browserTarget": "accomodation-app:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -80,7 +80,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "thd-accomodation-app:build"
+            "browserTarget": "accomodation-app:build"
           }
         },
         "test": {
